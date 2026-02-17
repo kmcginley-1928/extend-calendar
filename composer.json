@@ -18,11 +18,11 @@
         "name": "fas fa-calendar",
         "backgroundColor": "#4f46e5",
         "color": "#ffffff"
-      },
-      "frontend": { 
-        "forum": {
-          "js": "js/dist/forum.js"
-        }
+      }
+    },
+    "frontend": { 
+      "forum": {
+        "js": "js/dist/forum.js"
       }
     }
   }
