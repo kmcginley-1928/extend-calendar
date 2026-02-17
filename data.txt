@@ -1,37 +1,17 @@
-keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ npm install
-npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
-npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ ls webpack.config.js
+webpack.config.js
+keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ ls package.json
+package.json
+keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ ls js/src/forum/index.js
+js/src/forum/index.js
+keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ npm ls flarum-webpack-config
+extend-calendar@ /home/keith/Documents/GitHub/extend-calendar
+└── flarum-webpack-config@2.0.2
 
-added 285 packages, and audited 286 packages in 13s
-
-27 packages are looking for funding
-  run `npm fund` for details
-
-found 0 vulnerabilities
-keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ npm fund
-keith-extend-calendar
-├── https://opencollective.com/webpack
-│   └── webpack@5.105.2, loader-runner@4.3.1, schema-utils@4.3.3, tapable@2.3.0, terser-webpack-plugin@5.3.16, webpack-cli@5.1.4, schema-utils@2.7.1
-├─┬ https://opencollective.com/babel
-│ │ └── @babel/core@7.29.0
-│ └── https://opencollective.com/browserslist
-│     └── browserslist@4.28.1, caniuse-lite@1.0.30001770, update-browserslist-db@1.2.3
-├── https://github.com/sponsors/ljharb
-│   └── resolve@1.22.11, is-core-module@2.16.1, function-bind@1.1.2, supports-preserve-symlinks-flag@1.0.0
-├── https://opencollective.com/core-js
-│   └── core-js-compat@3.48.0
-└── https://github.com/avajs/find-cache-dir?sponsor=1
-    └── find-cache-dir@3.3.2
-
-keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ npm build
-Unknown command: "build"
-
-
-Did you mean this?
-  npm run build # run the "build" package script
-To see a list of supported npm commands, run:
-  npm help
-keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ npm run build
+keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ ^C
+keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ realpath js/src/forum/index.js
+/home/keith/Documents/GitHub/extend-calendar/js/src/forum/index.js
+keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ DEBOG=flarum-webpack-config* npm run build
 
 > build
 > webpack --mode production
