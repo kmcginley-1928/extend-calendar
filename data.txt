@@ -1,0 +1,134 @@
+   ./node_modules/@webpack-cli/serve:
+lib  LICENSE  package.json  README.md
+
+./node_modules/@webpack-cli/serve/lib:
+index.d.ts  index.js
+
+./node_modules/webpack-cli:
+bin  lib  LICENSE  node_modules  package.json  README.md
+
+./node_modules/webpack-cli/bin:
+cli.js
+
+./node_modules/webpack-cli/lib:
+bootstrap.d.ts  index.d.ts  plugins     types.js  webpack-cli.d.ts
+bootstrap.js    index.js    types.d.ts  utils     webpack-cli.js
+
+./node_modules/webpack-cli/lib/plugins:
+cli-plugin.d.ts  cli-plugin.js
+
+./node_modules/webpack-cli/lib/utils:
+dynamic-import-loader.d.ts  dynamic-import-loader.js
+
+./node_modules/webpack-cli/node_modules:
+commander
+
+./node_modules/webpack-cli/node_modules/commander:
+esm.mjs   lib      package.json          Readme.md
+index.js  LICENSE  package-support.json  typings
+
+./node_modules/webpack-cli/node_modules/commander/lib:
+argument.js  command.js  error.js  help.js  option.js  suggestSimilar.js
+
+./node_modules/webpack-cli/node_modules/commander/typings:
+index.d.ts
+
+./node_modules/webpack-merge:
+dist  LICENSE  package.json  README.md
+
+./node_modules/webpack-merge/dist:
+index.d.ts        join-arrays.js.map  types.js       utils.d.ts
+index.js          merge-with.d.ts     types.js.map   utils.js
+index.js.map      merge-with.js       unique.d.ts    utils.js.map
+join-arrays.d.ts  merge-with.js.map   unique.js
+join-arrays.js    types.d.ts          unique.js.map
+
+./node_modules/webpack-sources:
+lib  LICENSE  package.json  README.md  types.d.ts
+
+./node_modules/webpack-sources/lib:
+CachedSource.js  helpers            PrefixSource.js   SizeOnlySource.js
+CompatSource.js  index.js           RawSource.js      Source.js
+ConcatSource.js  OriginalSource.js  ReplaceSource.js  SourceMapSource.js
+
+./node_modules/webpack-sources/lib/helpers:
+createMappingsSerializer.js  splitIntoPotentialTokens.js
+getFromStreamChunks.js       streamAndGetSourceAndMap.js
+getGeneratedSourceInfo.js    streamChunks.js
+getName.js                   streamChunksOfCombinedSourceMap.js
+getSource.js                 streamChunksOfRawSource.js
+readMappings.js              streamChunksOfSourceMap.js
+splitIntoLines.js            stringBufferUtils.js
+
+./node_modules/which:
+bin  CHANGELOG.md  LICENSE  package.json  README.md  which.js
+
+./node_modules/which/bin:
+node-which
+
+./node_modules/wildcard:
+docs.json  examples  index.js  LICENSE  package.json  README.md  test
+
+./node_modules/wildcard/examples:
+arrays.js  objects.js  strings.js
+
+./node_modules/wildcard/test:
+all.js  arrays.js  objects.js  strings.js
+
+./node_modules/ws:
+browser.js  index.js  lib  LICENSE  package.json  README.md
+
+./node_modules/ws/lib:
+buffer-util.js   extension.js           receiver.js  validation.js
+constants.js     limiter.js             sender.js    websocket.js
+event-target.js  permessage-deflate.js  stream.js    websocket-server.js
+
+./node_modules/@xtuc:
+ieee754  long
+
+./node_modules/@xtuc/ieee754:
+dist  index.js  LICENSE  package.json  README.md
+
+./node_modules/@xtuc/ieee754/dist:
+index.cjs.js
+
+./node_modules/@xtuc/long:
+dist  index.d.ts  index.js  LICENSE  package.json  README.md  src
+
+./node_modules/@xtuc/long/dist:
+long.js  long.js.map
+
+./node_modules/@xtuc/long/src:
+long.js
+
+./node_modules/yallist:
+iterator.js  LICENSE  package.json  README.md  yallist.js
+
+./vendor:
+autoload.php  composer
+
+./vendor/composer:
+autoload_classmap.php    autoload_psr4.php  autoload_static.php  LICENSE
+autoload_namespaces.php  autoload_real.php  ClassLoader.php
+keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ cat webpack.config.js
+const config = require('flarum-webpack-config');
+module.exports = config({
+  modules: {
+    forum: './js/src/forum/index.js',
+  },
+});
+keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ cat package.json
+{
+  "name": "keith-extend-calendar",
+  "private": true,
+  "devDependencies": {
+    "flarum-webpack-config": "^2",
+    "webpack": "^5",
+    "webpack-cli": "^5"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  }
+keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ ^C
+
