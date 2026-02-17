@@ -26,5 +26,5 @@ return [
     }),
 
     // Forum JS only (re-enable once your js/dist/forum.js is truly ready)
-    // (new Extend\Frontend('forum'))->js(__DIR__.'/js/dist/forum.js'),
+    (new Extend\Frontend('forum'))->js(__DIR__.'/js/dist/forum.js'),
 ];
