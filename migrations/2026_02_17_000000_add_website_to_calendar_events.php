@@ -1,22 +1,21 @@
 <?php
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Builder;
 
 return [
-    'up' => function () {
-        if (Schema::hasTable('he_events') && !Schema::hasColumn('events', 'website')) {
-            Schema::table('he_events', function (Blueprint $table) {
+    'up' => function (Builder $schema) {
+        if ($schema->hasTable('events') && !$schema->hasColumn('events', 'website')) {
+            $schema->table('events', function (Blueprint $table) {
                 $table->string('website')->nullable()->after('description');
             });
         }
     },
-
-    'down' => function () {
-        if (Schema::hasTable('he_events') && Schema::hasColumn('events', 'website')) {
-            Schema::table('he_events', function (Blueprint $table) {
+    'down' => function (Builder $schema) {
+        if ($schema->hasTable('events') && $schema->hasColumn('events', 'website')) {
+            $schema->table('events', function (Blueprint $table) {
                 $table->dropColumn('website');
             });
         }
-    }
+    },
 ];

@@ -3,66 +3,44 @@
 namespace Keith\ExtendCalendar;
 
 use Flarum\Extend;
-
 use Webbinaro\AdvCalendar\Event;
 use Webbinaro\AdvCalendar\Api\Serializers\EventSerializer;
-use Webbinaro\AdvCalendar\Api\Controllers\EventsCreateController;
-use Webbinaro\AdvCalendar\Api\Controllers\EventsUpdateController;
+use Illuminate\Database\Eloquent\Model;
+use Flarum\User\User;
+use Flarum\Event\Saving;
 
 return [
 
-    // Expose website on the API
+    // 1. Add "website" to the API serializer
     (new Extend\ApiSerializer(EventSerializer::class))
         ->attribute('website', function ($serializer, Event $event, array $attributes) {
             return $event->website ?? null;
         }),
 
-    // Cast on model
+    // 2. Cast it on the Eloquent model
     (new Extend\Model(Event::class))
-        ->cast([
-            'website' => 'string',
-        ]),
+        ->cast('website', 'string'),
 
-    // Save website on CREATE
-    (new Extend\ApiController(EventsCreateController::class))
-        ->prepareData(function ($controller, $request, $document) {
-            $data  = (array) $request->getParsedBody();
-            $attrs = $data['data']['attributes'] ?? [];
+    // 3. Save "website" using Flarum 1.8's Saving event
+    (new Extend\Event())
+        ->listen(Saving::class, function (Saving $event) {
+            $model = $event->model;
+            $actor = $event->actor;
+            $data  = $event->data;
+
+            // Only handle calendar events
+            if (!($model instanceof Event)) {
+                return;
+            }
+
+            $attrs = $data['attributes'] ?? [];
 
             if (array_key_exists('website', $attrs)) {
-                $request = $request->withAttribute('calendar.website', trim((string)$attrs['website']) ?: null);
+                $value = trim((string) $attrs['website']);
+                $model->website = $value !== '' ? $value : null;
             }
-        })
-        ->data(function ($controller, $event, $request) {
-            $website = $request->getAttribute('calendar.website');
-
-            if ($website !== null && $event instanceof Event) {
-                $event->website = $website;
-                $event->save();
-            }
-
-            return $event;
         }),
 
-    // Save website on UPDATE
-    (new Extend\ApiController(EventsUpdateController::class))
-        ->prepareData(function ($controller, $request, $document) {
-            $data  = (array) $request->getParsedBody();
-            $attrs = $data['data']['attributes'] ?? [];
-
-            if (array_key_exists('website', $attrs)) {
-                $request = $request->withAttribute('calendar.website', trim((string)$attrs['website']) ?: null);
-            }
-        })
-        ->data(function ($controller, $event, $request) {
-            $website = $request->getAttribute('calendar.website');
-
-            if ($website !== null && $event instanceof Event) {
-                $event->website = $website;
-                $event->save();
-            }
-
-            return $event;
-        }),
-
+    // 4. FRONTEND JS will be added back later once build is correct
+    // (new Extend\Frontend('forum'))->js(__DIR__.'/js/dist/forum.js'),
 ];
