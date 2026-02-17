@@ -14,3 +14,4 @@ ERROR: No JS entrypoints could be found.
 webpack 5.105.2 compiled successfully in 65 ms
 keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ 
 
+npm run build -- --config webpack.temp.config.js
