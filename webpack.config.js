@@ -4,5 +4,5 @@ module.exports = config({
   modules: {
     forum: './js/src/forum/index.js',
     admin: null
-  },
+  }
 });
