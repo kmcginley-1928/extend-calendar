@@ -1,16 +1,22 @@
-keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ DEBUG=flarum-webpack-config* npm run build
-
-> build
-> webpack --mode production
-
-ERROR: No JS entrypoints could be found.
-webpack 5.105.2 compiled successfully in 66 ms
-keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ which webpack
-keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ npx webpack --mode production
-ERROR: No JS entrypoints could be found.
-webpack 5.105.2 compiled successfully in 66 ms
-keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ webpack --config webpack.config.js --mode production
-Command 'webpack' not found, but can be installed with:
-sudo apt install webpack
+keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ ls -la
+total 216
+drwxrwxr-x   9 keith keith   4096 Feb 17 15:59 .
+drwxrwxr-x   4 keith keith   4096 Feb 17 14:41 ..
+-rw-rw-r--   1 keith keith    573 Feb 17 15:34 composer.json
+-rw-rw-r--   1 keith keith    707 Feb 17 15:59 data.txt
+drwxrwxr-x   2 keith keith   4096 Feb 17 15:46 dist
+-rw-rw-r--   1 keith keith   2751 Feb 17 14:41 extend.php
+drwxrwxr-x   8 keith keith   4096 Feb 17 15:59 .git
+-rw-rw-r--   1 keith keith     66 Feb 17 14:41 .gitattributes
+drwxrwxr-x   4 keith keith   4096 Feb 17 15:13 js
+drwxrwxr-x   2 keith keith   4096 Feb 17 15:34 migrations
+drwxrwxr-x 146 keith keith   4096 Feb 17 15:37 node_modules
+-rw-rw-r--   1 keith keith    268 Feb 17 15:34 package.json
+-rw-rw-r--   1 keith keith 152915 Feb 17 15:37 package-lock.json
+-rw-rw-r--   1 keith keith     71 Feb 17 14:41 README.md
+drwxrwxr-x   2 keith keith   4096 Feb 17 15:53 src
+drwxrwxr-x   3 keith keith   4096 Feb 17 14:45 vendor
+-rw-rw-r--   1 keith keith    152 Feb 17 15:38 webpack.config.js
 keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ 
+
 
