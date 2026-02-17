@@ -1,5 +1,5 @@
 {
-  "name": "keith-extend-calendar",
+  "name": "extend-calendar",
   "private": true,
   "devDependencies": {
     "flarum-webpack-config": "^2",

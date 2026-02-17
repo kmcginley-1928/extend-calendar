@@ -7,7 +7,7 @@
     { "name": "Keith McGinley" }
   ],
   "require": {
-    "flarum/core": "^1.0"
+    "flarum/core": "^1.7"
   },
   "autoload": {
     "psr-4": {
@@ -16,7 +16,7 @@
   },
   "extra": {
     "flarum-extension": {
-      "title": "Calendar: Website field",
+      "title": "Extend Calendar (Website Field)",
       "category": "feature",
       "frontend": {
         "forum": {
