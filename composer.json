@@ -1,0 +1,28 @@
+{
+  "name": "keith/extend-calendar",
+  "description": "Adds a website field to each event in eddiewebb/flarum-calendar",
+  "type": "flarum-extension",
+  "license": "MIT",
+  "authors": [
+    { "name": "Keith McGinley" }
+  ],
+  "require": {
+    "flarum/core": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Keith\\ExtendCalendar\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Calendar: Website field",
+      "category": "feature",
+      "frontend": {
+        "forum": {
+          "js": "js/dist/forum.js"
+        }
+      }
+    }
+  }
+}
