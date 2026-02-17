@@ -4,25 +4,12 @@ keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ npm run build -- --config 
 > webpack --config webpack.config.js --mode production --config webpack.temp.config.js
 
 ERROR: No JS entrypoints could be found.
-webpack 5.105.2 compiled successfully in 73 ms
+webpack 5.105.2 compiled successfully in 72 ms
 
-asset forum.js 1.33 KiB [emitted] [minimized] (name: forum)
+asset forum.js 1.06 KiB [emitted] [minimized] (name: forum)
 runtime modules 663 bytes 3 modules
 orphan modules 84 bytes [orphan] 2 modules
-./js/src/forum/index.js + 2 modules 1.71 KiB [not cacheable] [built] [code generated]
-
-WARNING in ./js/src/forum/index.js 6:23-93
-Module not found: Error: Can't resolve 'eddiewebb/flarum-calendar/components/EditEventModal' in '/home/keith/Documents/GitHub/extend-calendar/js/src/forum'
-
-WARNING in ./js/src/forum/index.js 7:46-116
-Module not found: Error: Can't resolve 'webbinaro/flarum-calendar/components/EditEventModal' in '/home/keith/Documents/GitHub/extend-calendar/js/src/forum'
-
-WARNING in ./js/src/forum/index.js 8:46-112
-Module not found: Error: Can't resolve 'webbinaro/advcalendar/components/EditEventModal' in '/home/keith/Documents/GitHub/extend-calendar/js/src/forum'
-
-3 warnings have detailed information that is not shown.
-Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
-
-webpack 5.105.2 compiled with 3 warnings in 953 ms
+./js/src/forum/index.js + 2 modules 1.58 KiB [not cacheable] [built] [code generated]
+webpack 5.105.2 compiled successfully in 432 ms
 keith@Forty2-iMac:~/Documents/GitHub/extend-calendar$ 
 
