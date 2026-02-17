@@ -6,8 +6,8 @@
     "webpack": "^5",
     "webpack-cli": "^5"
   },
-  "scripts": {
-  "build": "webpack --config webpack.config.js --mode production",
-  "dev": "webpack --config webpack.config.js --mode development --watch"
+"scripts": {
+  "build": "webpack --config webpack.temp.config.js --mode production",
+  "dev": "webpack --config webpack.temp.config.js --mode development --watch"
 }
 }
